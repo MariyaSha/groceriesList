@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>Grocery List</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+		<script type=text/javascript src="{{url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
+
+	<div>
+		<img src="https://raw.githubusercontent.com/MariyaSha/groceriesList/main/logo.png">
+	</div>
+	<div id="grocery_list">
+		<form action="/remove_items" method="post">
+        {% for message in list_items %}
+	        <input name="check" type="checkbox" id="{{ message }}" value="{{ message }}" onchange="check_me('{{ message }}')" />
+	        <label for="{{ message }}" name="{{ message }}">{{ message }}</label><br>
+         {% endfor %}
+        <input type="submit" name="remove" value="CHECK ITEMS" id="remove_btn">
+		</form>
+	</div>
+	<div id="add_items">
+		<form action="add_item" method="post" name="add_items">
+       		<select id="items" name="add_items">
+
+	        {% for message in list_options %}
+		        <option value="{{ message }}"> {{ message }} </option>
+      	    {% endfor %}
+
+  	   		<input type="submit" value="ADD ITEM" id="submit">
+
+			</select>
+		</form>
+	</div>
+</body>
+</html>

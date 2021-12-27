@@ -1,0 +1,71 @@
+body {
+	background-color: #302B29;
+	font-family: "Raleway";
+	color:  #FFFFFF;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+img {
+	width:  400px;
+	padding:  20px;
+}
+
+label {
+	margin:  25px 5px;
+}
+
+#grocery_list form {
+		padding-left: 45%;
+}
+
+#grocery_list {
+	background-color: #C6C1BD;
+	color: #302B29;
+	padding:  30px;
+	text-align: left;
+}
+
+#submit {
+	background-color: #01A88A;
+	color:  #FFFFFF;
+	font-weight: bold;
+	border-radius: 5px;
+	border:  2px solid #FFFFFF;
+	margin:  10px;
+	padding:  10px 15px;
+	cursor: pointer;
+}
+
+#remove_btn {
+	background-color: lightgrey;
+	color:  black;
+	font-weight: bold;
+	border-radius: 5px;
+	border:  2px solid #FFFFFF;
+	margin:  10px;
+	padding:  10px 15px;
+	/*cursor: pointer;*/
+}
+
+
+#items {
+	margin:  20px 10px;
+	font-size: 0.85em;
+	width:  200px;
+	font-family: "Raleway";
+	text-align: center;
+	margin:  50px 10px;
+	padding:  5px 0;
+}
+
+option {
+	color: #302B29;
+	padding:  0;
+	/*margin:  10px 5px;*/
+}
+
+input {
+	font-family: "Raleway";
+	color:  #302B29;
+}

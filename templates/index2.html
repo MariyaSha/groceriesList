@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>grocery list</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+		<script type=text/javascript src="{{url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
+
+	<div>
+		<img src="https://raw.githubusercontent.com/MariyaSha/groceriesList/main/logo.png">
+	</div>
+	<div id="grocery_list">
+		<form action="/remove_me" method="post">
+        {% for message in list_items %}
+	        <input name="check" type="checkbox" id="{{ message }}" value="{{ message }}" onchange="check_me('{{ message }}')" />
+	        <label for="{{ message }}" name="{{ message }}">{{ message }}</label><br>
+         {% endfor %}
+        <input type="submit" name="remove" value="CHECK ITEMS" id="remove2">
+		</form>
+	</div>
+	<div id="add_items">
+		<form action="test_me" method="post" name="add_items">
+       		<select id="items" name="add_items">
+
+	        {% for message in list_options %}
+		        <option value="{{ message }}"> {{ message }} </option>
+      	    {% endfor %}
+
+  	   		<input type="submit" value="ADD ITEM" id="submit" onclick="submit_me()">
+
+			</select>
+		</form>
+	</div>
+</body>
+</html>
+
+
+<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+<!-- FROM FLASK TO JS -->
+<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>update contact</title>
+  </head>
+  <body></body>
+  <script>
+    function pushtodatabase(key, newvals) {
+      var xhttp = new XMLHttpRequest();
+      xhttp.open('POST', 'updatecontact', true);
+      var msg = { msg: newvals.join('|') };
+      var msgjson = JSON.stringify(msg);
+      xhttp.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
+      xhttp.send(msgjson);
+
+      xhttp.addEventListener('load', reqListener);
+
+      console.log('xhttp.responseText:', xhttp.responseText);
+      console.log('xhttp.status:', xhttp.status);
+    }
+
+    function reqListener() {
+      console.log('this.responseText:', this.responseText);
+      console.log('this.status:', this.status);
+    }
+
+    window.onload = function () {
+      pushtodatabase('key,', ['a', 'b']);
+    };
+  </script>
+</html> -->
+
+<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+<!-- PERFECT -->
+<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+<!-- https://stackoverflow.com/questions/65218421/send-data-returned-from-javascript-function-to-flask-backend -->
+
+<!-- 	<form action="" method="post" id='myForm'>
+    <button name="button" value="value">Send</button>
+</form>
+
+<form action="" method="post" id='myForm2'>
+    <button id="myButton2" name="button2" value=0 onclick="modifyData()">Send</button>
+</form>
+
+<script>
+    function modifyData() {
+        data = "I want to send this to backend"
+        document.getElementById("myButton2").value = data;
+    }
+</script> -->
