@@ -1,60 +1,42 @@
 import sys
 import sqlite3
-from flask import Flask, flash, render_template, request
+from flask import Flask, session, render_template, request
 from flask import g
 import random
 
 app = Flask(__name__)
 app.secret_key = "manbearpig_MUDMAN888"
 
-# initiallizing global variables
-# to beused in multiple methods
-all_vals = []
-list_vals = []
-
-@app.route("/", methods=['POST','GET'])
+@app.route("/", methods = ['POST','GET'])
 def main():
-    #access global variables
-    global all_vals
-    global list_vals
+    session["all_vals"], session["main_vals"] = get_db()
+    return render_template("index.html", list_options = session["all_vals"], 
+                                         list_items = session["main_vals"])
 
-    #load database into global variables
-    a_vals, l_vals = get_db()
-    all_vals = a_vals.copy()
-    list_vals = l_vals.copy()
-    print("data is loaded globally", file=sys.stdout)
-
-    return render_template("index.html", list_options=all_vals, list_items=list_vals)
-
-@app.route("/remove_items", methods=['POST'])
-def remove_me():
-    #access global variables
-    global all_vals
-    global list_vals
-
+@app.route("/remove_items", methods = ['POST'])
+def remove_items():
     # get all checked checkbox elements
-    checked_items = request.form.getlist('check')
-    for i in checked_items:
-        print(i, file=sys.stdout)
-        # update global variables
-        if i in list_vals:
-            idx = list_vals.index(i)
-            print("found " + i + " at idx: ", idx, file=sys.stdout)
-            #remove item
-            list_vals.pop(idx)
+    checked_boxes = request.form.getlist('check')
 
-    return render_template("index.html", list_options=all_vals, list_items=list_vals)
+    for i in checked_boxes:
+        print(i, file = sys.stdout)
+
+        if i in session["main_vals"]:
+
+            #remove item & update session
+            idx = session["main_vals"].index(i)
+            session["main_vals"].pop(idx)
+            session.modified = True
+
+    return render_template("index.html", list_options=session["all_vals"], list_items=session["main_vals"])
 
 @app.route("/add_item", methods=['POST','GET'])
-def test_me():
-    #access global variables
-    global all_vals
-    global list_vals
+def add_item():
 
-    list_vals.append(request.form["add_items"])
-    print("added " + request.form["add_items"] + " to grocery list", file=sys.stdout)
+    session["main_vals"].append(request.form["add_items"])
+    session.modified = True
 
-    return render_template("index.html", list_options=all_vals, list_items=list_vals)
+    return render_template("index.html", list_options=session["all_vals"], list_items=session["main_vals"])
 
 def get_db():
     db = getattr(g, '_database', None)
