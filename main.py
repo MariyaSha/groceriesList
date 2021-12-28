@@ -58,10 +58,13 @@ def get_db():
         for i in all_vals:
             print(i, file=sys.stdout)
 
+        # create a list of all items (comes sorted from DB)
         all_vals = [str(val).replace("('", '').replace("',)", '') for val in all_vals]
-        random.shuffle(all_vals)
 
-        main_vals = all_vals[:5]
+        # randomly shuffle list and select 5 items
+        main_vals = all_vals.copy()
+        random.shuffle(main_vals)
+        main_vals = main_vals[:5]
 
     return all_vals, main_vals
 

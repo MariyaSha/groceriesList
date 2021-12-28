@@ -1,5 +1,4 @@
 body {
-	background-color: #302B29;
 	font-family: "Raleway";
 	color:  #FFFFFF;
 	font-size: 1.5em;
@@ -20,7 +19,7 @@ label {
 }
 
 #grocery_list {
-	background-color: #C6C1BD;
+	background-color: #E5E5E5;
 	color: #302B29;
 	padding:  30px;
 	text-align: left;
@@ -30,7 +29,7 @@ label {
 	background-color: #01A88A;
 	color:  #FFFFFF;
 	font-weight: bold;
-	border-radius: 5px;
+	border-radius: 20px;
 	border:  2px solid #FFFFFF;
 	margin:  10px;
 	padding:  10px 15px;
@@ -41,15 +40,14 @@ label {
 	background-color: lightgrey;
 	color:  black;
 	font-weight: bold;
-	border-radius: 5px;
+	border-radius: 20px;
 	border:  2px solid #FFFFFF;
 	margin:  10px;
 	padding:  10px 15px;
-	/*cursor: pointer;*/
 }
 
 
-#items {
+#select_items {
 	margin:  20px 10px;
 	font-size: 0.85em;
 	width:  200px;
@@ -57,12 +55,12 @@ label {
 	text-align: center;
 	margin:  50px 10px;
 	padding:  5px 0;
+	border: 2px solid darkgrey;
 }
 
 option {
 	color: #302B29;
 	padding:  0;
-	/*margin:  10px 5px;*/
 }
 
 input {

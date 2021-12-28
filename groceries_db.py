@@ -1,5 +1,4 @@
 import sqlite3
-import random
 
 groceries = [
 	"apples",
@@ -64,6 +63,8 @@ groceries = [
 	"cheese",
 	"cilantro"
 ]
+
+groceries = sorted(groceries)
 
 connection = sqlite3.connect("grocery_list.db")
 cursor = connection.cursor()
