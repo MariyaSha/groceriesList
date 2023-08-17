@@ -9,7 +9,7 @@ Author: Mariya Sha
 YouTube tutorial: https://youtu.be/v3CSQkPJtAc
 <br>
 <br>
-<h3>This project contains several files:</h3>
+<h2>This project contains several files:</h2>
 <b>app.py</b> 
 <br>
 includes the backend of the application - all the routes and request logic.
