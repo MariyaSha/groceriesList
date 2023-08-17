@@ -33,15 +33,14 @@ the stylesheet of the application
 <b>static/js/main.js</b>
 <br>
 includes all the client side interactions of the app
-<br>
-Please note, Wayscript is unfortunatley gone and therefore the app is no longer hosted on their servers.
+<h3>Please note</h3>
+Wayscript is unfortunatley gone and therefore the app is no longer hosted on their servers.
 <br>
 If you'd like to learn how to host your app on Heroku instead, I shor it in another tutorial of mine:
 <br>
 <b>Simple Web App with Flask and Heroku</b>
 <br>
 https://youtu.be/6plVs_ytIH8
-<br>
-<br>
+<h3>Project Wireframe</h3>
 <img src="https://user-images.githubusercontent.com/32107652/147585644-dd16f762-dc7c-4d0f-bc9a-31087d31aa13.png" style="width:600px;" alt="Groceries Flask and Sqlite App Wireframe">
 
