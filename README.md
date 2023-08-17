@@ -1,18 +1,47 @@
 # groceriesList
 a simple Flask application using SQLite database
 
-please note, this repository only contains starter files.
+<h1>Flask & Sqlite Groceries Application</h1>
+<img src="https://user-images.githubusercontent.com/32107652/152341884-18a88dca-d800-471b-a618-1eca19bf28c1.png" style="width:500px;" alt="Groceries Flask and Sqlite App Thumbnail">
 <br>
-the complete application can be cloned from Wayscript:
+Author: Mariya Sha
 <br>
-https://app.wayscript.com/lairs/8efe30b2-17c0-4b0f-8c51-5852891b723c/public/
+YouTube tutorial: https://youtu.be/v3CSQkPJtAc
 <br>
-or you can code it along with me by following this tutorial:
 <br>
-https://youtu.be/v3CSQkPJtAc
+<h3>This project contains several files:</h3>
+<b>app.py</b> 
+<br>
+includes the backend of the application - all the routes and request logic.
+<br>
+<b>grocery_list.db</b> 
+<br>
+a complete SQLite groceries database which was created with grocery_list.py
+<br>
+<b>grocery_list.py</b>
+<br>
+the file which created grocery_list.db
+<br> 
+<b>templates/index.html</b>
+<br>
+The HTML template of the application, containing Jinja expressions
+<br>
+<b>static/css/main.css</b>
+<br>
+the stylesheet of the application
+<br>
+<b>static/js/main.js</b>
+<br>
+includes all the client side interactions of the app
+<br>
+Please note, Wayscript is unfortunatley gone and therefore the app is no longer hosted on their servers.
+<br>
+If you'd like to learn how to host your app on Heroku instead, I shor it in another tutorial of mine:
+<br>
+<b>Simple Web App with Flask and Heroku</b>
+<br>
+https://youtu.be/6plVs_ytIH8
 <br>
 <br>
 ![Wireframe](https://user-images.githubusercontent.com/32107652/147585644-dd16f762-dc7c-4d0f-bc9a-31087d31aa13.png)
-<br>
-<br>
-<b>Author</b>: Mariya Sha
+
