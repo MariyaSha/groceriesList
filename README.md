@@ -2,7 +2,7 @@
 a simple Flask application using SQLite database
 
 <h1>Flask & Sqlite Groceries Application</h1>
-<img src="https://user-images.githubusercontent.com/32107652/152341884-18a88dca-d800-471b-a618-1eca19bf28c1.png" style="width:500px;" alt="Groceries Flask and Sqlite App Thumbnail">
+<img src="https://user-images.githubusercontent.com/32107652/152341884-18a88dca-d800-471b-a618-1eca19bf28c1.png" style="width:600px;" alt="Groceries Flask and Sqlite App Thumbnail">
 <br>
 Author: Mariya Sha
 <br>
@@ -43,5 +43,5 @@ If you'd like to learn how to host your app on Heroku instead, I shor it in anot
 https://youtu.be/6plVs_ytIH8
 <br>
 <br>
-![Wireframe](https://user-images.githubusercontent.com/32107652/147585644-dd16f762-dc7c-4d0f-bc9a-31087d31aa13.png)
+<img src="https://user-images.githubusercontent.com/32107652/147585644-dd16f762-dc7c-4d0f-bc9a-31087d31aa13.png" style="width:600px;" alt="Groceries Flask and Sqlite App Wireframe">
 
